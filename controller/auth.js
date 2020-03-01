@@ -39,7 +39,7 @@ class Auth {
             password: bcrypt.hashSync(password, salt)
         }).then(function (result) {
             res.json({
-                status: 'success',
+                status: 'successd',
                 message: 'Insert Data Success',
                 data: result
             })
