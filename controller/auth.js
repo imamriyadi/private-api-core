@@ -1,21 +1,24 @@
 const modelUser = require('../models').user;
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
 
 class Auth {
     static login(req, res) {
         const {username, password} = req.body;
-        return modelUser.findAll({
-            attributes:['username','password'],
+         return  modelUser.findAll({
+            attributes: ['fullname', 'username', 'password'],
             where: {
                 username: username
             }
         }).then(function (result) {
             bcrypt.compare(password, result.password, function (err, response) {
+                const token = jwt.sign({result}, "jwtsecret", { expiresIn: 10080 });
                 res.json({
-                    status: 'success',
-                    message: 'success get all data',
-                    data: result
+                    status: 'Success',
+                    message: 'Login Success',
+                    token: 'Bearer '+ token
                 })
+
             });
         }).catch(function (err) {
             res.status(400).json({
