@@ -1,4 +1,4 @@
-# private-api-core
+# private api core
 
 langkah pertama lakukan install exspress generator dan sequelize-cli menggunakan npm<br>
 ### `npm i -g express-generator sequelize-cli`
@@ -8,7 +8,7 @@ install sequelize dan mysql <br>
 
 Setelah itu, kita akan membuat direktori yang diperlukan untuk koneksi ke DB dengan perintah<br>
 ### `sequelize init`
-// output : Perintah di atas menghasilkan 4 folder, yaitu config, models, migrations, dan seeders.
+output : Perintah di atas menghasilkan 4 folder, yaitu config, models, migrations, dan seeders.
 
 memebuat model dengan sequelize
 ### `sequelize model:create --name users --attributes name:string,email:string,phone_number:string,gender:boolean`
