@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = {
     up: (queryInterface, Sequelize) => {
 
@@ -10,7 +9,6 @@ module.exports = {
             password: "21232f297a57a5a743894a0e4a801fc3",
             createdAt: new Date()
         }], {});
-
     },
 
     down: (queryInterface, Sequelize) => {

@@ -19,7 +19,7 @@ module.exports = {
                 type: Sequelize.STRING(50)
             },
             password: {
-                type: Sequelize.STRING(50)
+                type: Sequelize.STRING(150)
             },
             createdAt: {
                 allowNull: false,
@@ -32,6 +32,6 @@ module.exports = {
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('users');
+        return queryInterface.dropTable('user');
     }
 };
