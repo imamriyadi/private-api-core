@@ -18,7 +18,6 @@ class Auth {
                     message: 'Login Success',
                     token: 'Bearer '+ token
                 })
-
             });
         }).catch(function (err) {
             res.status(400).json({
